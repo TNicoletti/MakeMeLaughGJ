@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwdjy5dvlw4vf"]
+
+[ext_resource type="PackedScene" uid="uid://b44cnp22f7gby" path="res://Scenes/char.tscn" id="1_d002j"]
+[ext_resource type="Script" path="res://Scripts/fight_manager.gd" id="2_is5p3"]
+
+[node name="Main" type="Node2D"]
+
+[node name="pos_a_1" type="Node2D" parent="."]
+position = Vector2(150, 200)
+
+[node name="Char" parent="pos_a_1" instance=ExtResource("1_d002j")]
+
+[node name="pos_a_2" type="Node2D" parent="."]
+position = Vector2(250, 200)
+
+[node name="Char" parent="pos_a_2" instance=ExtResource("1_d002j")]
+priority = 1
+
+[node name="pos_a_3" type="Node2D" parent="."]
+position = Vector2(350, 200)
+
+[node name="Char" parent="pos_a_3" instance=ExtResource("1_d002j")]
+priority = 2
+
+[node name="pos_a_4" type="Node2D" parent="."]
+position = Vector2(450, 200)
+
+[node name="Char" parent="pos_a_4" instance=ExtResource("1_d002j")]
+priority = 3
+
+[node name="pos_e_1" type="Node2D" parent="."]
+position = Vector2(979, 297)
+
+[node name="FM" type="Node" parent="."]
+script = ExtResource("2_is5p3")
