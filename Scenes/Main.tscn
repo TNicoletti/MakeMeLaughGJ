@@ -54,3 +54,10 @@ hability_description = ""
 [node name="FM" type="Node" parent="."]
 script = ExtResource("2_is5p3")
 turns = 17
+
+[node name="turn_label" type="Label" parent="."]
+offset_left = 44.0
+offset_top = 488.0
+offset_right = 84.0
+offset_bottom = 511.0
+text = "Turn: 0"

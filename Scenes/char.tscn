@@ -66,3 +66,10 @@ text = "xxxxx"
 position = Vector2(-13, 13)
 scale = Vector2(2, 2)
 texture = ExtResource("2_8f5kp")
+
+[node name="is_turn" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 0.768627, 0.223529, 1)
+position = Vector2(0, -69)
+scale = Vector2(2, 2)
+texture = ExtResource("2_8f5kp")

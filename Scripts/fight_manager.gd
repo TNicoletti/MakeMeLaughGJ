@@ -23,7 +23,9 @@ func turn(current_turn, single = false):
 		print("You lose") 
 		lose.emit()
 		return #loose
+	update_turn(current_turn)
 	var at = (current_turn - 1) % 4
+	ally[at].set_turn()
 	
 	if print_turns:
 		print("turn " + str(current_turn))
@@ -45,20 +47,28 @@ func turn(current_turn, single = false):
 			ally[at + 1].r_laugh *= 2
 			ally[at + 1].y_laugh *= 2
 			ally[at + 1].update_label()
+			ally[at + 1].animate_buff()
 	if ally[at].hability == 2:
 		ally[at].g_laugh *= 1.3
 		ally[at].b_laugh *= 1.3
 		ally[at].r_laugh *= 1.3
 		ally[at].y_laugh *= 1.3
 		ally[at].update_label()
+		ally[at].animate_buff()
 	
 	if enemy.is_dead():
 		print("GANHOU")
 		win.emit()
 		return
 	await get_tree().create_timer(2).timeout 
+	ally[at].unset_turn()
 	if ally[at].hability == 3:
 		turn(current_turn + 1, true)
+		await get_tree().create_timer(2).timeout
 	
 	if not single:
 		turn(current_turn + 1)
+
+func update_turn(x):
+	get_parent().get_node("turn_label").text= "Turn: " + str(x)
+	pass

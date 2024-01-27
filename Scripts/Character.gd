@@ -20,3 +20,27 @@ func update_label():
 	
 func is_dead(): #Enemy function
 	return b_laugh < 0 and g_laugh < 0 and r_laugh < 0 and y_laugh < 0
+
+func set_turn():
+	$is_turn.visible = true
+	pass
+
+func unset_turn():
+	$is_turn.visible = false
+	pass
+	
+func animate_buff():
+	$Sprite.modulate = "green"
+	await get_tree().create_timer(2).timeout 
+	$Sprite.modulate = "white"
+	pass
+	
+func animate_debuff():
+	$Sprite.modulate = "red"
+	await get_tree().create_timer(2).timeout 
+	$Sprite.modulate = "white"
+	pass
+	
+func animate_laugh():
+	
+	pass
