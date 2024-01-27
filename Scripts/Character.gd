@@ -17,3 +17,6 @@ func update_label():
 	$r_label.text = str(r_laugh)
 	$b_label.text = str(b_laugh)
 	$y_label.text = str(y_laugh)
+	
+func is_dead(): #Enemy function
+	return b_laugh < 0 and g_laugh < 0 and r_laugh < 0 and y_laugh < 0
