@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/SelectScreen.gd" id="1_334ey"]
 [ext_resource type="Texture2D" uid="uid://cmx0tqgsbaue6" path="res://icon.svg" id="1_l48yb"]
-[ext_resource type="Texture2D" uid="uid://bae6gaykgc710" path="res://Assets/UI/selectButton.png" id="1_r7qyp"]
+[ext_resource type="Texture2D" uid="uid://bkv38gkduhyan" path="res://Assets/UI/selectButton.png" id="1_r7qyp"]
 
 [node name="SelectScreen" type="Control"]
 layout_mode = 3
@@ -116,6 +116,15 @@ layout_mode = 2
 texture_normal = ExtResource("1_r7qyp")
 flip_v = true
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 418.0
+offset_right = 674.0
+offset_bottom = 495.0
+theme_override_font_sizes/font_size = 50
+text = "Pronto"
+
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/CenterContainer2/BotaoSuperior" to="." method="_on_botao_superior1_pressed" binds= [0]]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/CenterContainer/BotaoInferior" to="." method="_on_botao_inferior1_pressed" binds= [0]]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/CenterContainer/BotaoSuperior" to="." method="_on_botao_superior1_pressed" binds= [1]]
@@ -123,3 +132,5 @@ flip_v = true
 [connection signal="pressed" from="HBoxContainer/VBoxContainer3/CenterContainer/BotaoSuperior" to="." method="_on_botao_superior1_pressed" binds= [2]]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer3/CenterContainer2/BotaoInferioir" to="." method="_on_botao_inferior1_pressed" binds= [2]]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer4/CenterContainer/BotaoSuperior" to="." method="_on_botao_superior1_pressed" binds= [3]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer4/CenterContainer2/BotaoInferior" to="." method="_on_botao_inferior1_pressed" binds= [3]]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

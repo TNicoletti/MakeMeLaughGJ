@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcsxep7jen80d"]
+
+[ext_resource type="PackedScene" uid="uid://b44cnp22f7gby" path="res://Scenes/char.tscn" id="1_bvinj"]
+
+[node name="Char" instance=ExtResource("1_bvinj")]
+hability_description = "Increases right ally attack gradually"

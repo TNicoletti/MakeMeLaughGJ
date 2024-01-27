@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpmtitfn0lc0c"]
+
+[ext_resource type="PackedScene" uid="uid://b44cnp22f7gby" path="res://Scenes/char.tscn" id="1_7c1ol"]
+
+[node name="Char" instance=ExtResource("1_7c1ol")]
+g_laugh = 70
+b_laugh = 5
+r_laugh = 20
+hability = 0
+hability_description = ""

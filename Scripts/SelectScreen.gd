@@ -15,3 +15,7 @@ func _on_botao_inferior1_pressed(id):
 	GamePersistSg.ally[id]-=1
 	if GamePersistSg.ally[id]==-1:
 		GamePersistSg.ally[id]+=GamePersistSg.ALLY_MAX
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/Main.tscn")
