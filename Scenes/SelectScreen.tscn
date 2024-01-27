@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cf5pj2gr6m5jk"]
+
+[node name="SelectScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
