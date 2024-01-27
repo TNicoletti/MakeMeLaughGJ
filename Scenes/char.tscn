@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b44cnp22f7gby"]
+[gd_scene load_steps=4 format=3 uid="uid://b44cnp22f7gby"]
 
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="1_8hwsy"]
 [ext_resource type="Texture2D" uid="uid://cxtjm6nmv7kkx" path="res://Sprites/Simboll.png" id="2_8f5kp"]
+[ext_resource type="Texture2D" uid="uid://c81f7v5qceyhe" path="res://Sprites/Jester.png" id="2_c10i7"]
 
 [node name="Char" type="Node2D"]
 script = ExtResource("1_8hwsy")
@@ -12,14 +13,14 @@ hability_description = "Doubles next unity's stats"
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(5, 5)
-texture = null
+texture = ExtResource("2_c10i7")
 
 [node name="g_label" type="Label" parent="."]
 modulate = Color(0, 0.411765, 0.2, 1)
-offset_left = -18.0
-offset_top = 43.0
-offset_right = 32.0
-offset_bottom = 66.0
+offset_left = 9.0
+offset_top = 41.0
+offset_right = 59.0
+offset_bottom = 64.0
 text = "xxxxx"
 
 [node name="Simboll" type="Sprite2D" parent="g_label"]
@@ -29,10 +30,10 @@ texture = ExtResource("2_8f5kp")
 
 [node name="r_label" type="Label" parent="."]
 modulate = Color(0.647059, 0.0392157, 0, 1)
-offset_left = -18.0
-offset_top = 63.0
-offset_right = 32.0
-offset_bottom = 86.0
+offset_left = 9.0
+offset_top = 61.0
+offset_right = 59.0
+offset_bottom = 84.0
 text = "xxxxx"
 
 [node name="Simboll" type="Sprite2D" parent="r_label"]
@@ -42,10 +43,10 @@ texture = ExtResource("2_8f5kp")
 
 [node name="b_label" type="Label" parent="."]
 modulate = Color(0, 0.364706, 0.541176, 1)
-offset_left = -18.0
-offset_top = 82.0
-offset_right = 32.0
-offset_bottom = 105.0
+offset_left = 9.0
+offset_top = 80.0
+offset_right = 59.0
+offset_bottom = 103.0
 text = "xxxxx"
 
 [node name="Simboll" type="Sprite2D" parent="b_label"]
@@ -55,13 +56,20 @@ texture = ExtResource("2_8f5kp")
 
 [node name="y_label" type="Label" parent="."]
 modulate = Color(0.854902, 0.643137, 0, 1)
-offset_left = -18.0
-offset_top = 103.0
-offset_right = 32.0
-offset_bottom = 126.0
+offset_left = 9.0
+offset_top = 101.0
+offset_right = 59.0
+offset_bottom = 124.0
 text = "xxxxx"
 
 [node name="Simboll" type="Sprite2D" parent="y_label"]
 position = Vector2(-13, 13)
+scale = Vector2(2, 2)
+texture = ExtResource("2_8f5kp")
+
+[node name="is_turn" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 0.768627, 0.223529, 1)
+position = Vector2(0, -69)
 scale = Vector2(2, 2)
 texture = ExtResource("2_8f5kp")
