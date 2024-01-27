@@ -6,5 +6,5 @@ extends Node
 @export var r_laugh = 10
 @export var y_laugh = 10
 
-
-var hability
+@export var hability = 0
+@export var hability_description = ""

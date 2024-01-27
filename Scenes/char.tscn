@@ -4,5 +4,7 @@
 
 [node name="Char" type="Node2D"]
 script = ExtResource("1_8hwsy")
+hability = 1
+hability_description = "Doubles next unity's stats"
 
 [node name="CharSC" type="Node2D" parent="."]

@@ -1,5 +1,9 @@
 res://Scenes/Main.tscn
 res://Scripts/Character.gd
+res://Scripts/fight_manager.gd
 res://Scenes/char.tscn
 res://Scripts/Enemy.gd
-res://Scripts/fight_manager.gd
+res://Scripts/GamePersistSG.gd
+res://Scenes/char2.tscn
+res://Scripts/btn_start.gd
+res://Scenes/Menu.tscn
