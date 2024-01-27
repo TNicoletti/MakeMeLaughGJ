@@ -8,3 +8,12 @@ extends Node
 
 @export var hability = 0
 @export var hability_description = ""
+
+func _ready():
+	update_label()
+
+func update_label():
+	$g_label.text = str(g_laugh)
+	$r_label.text = str(r_laugh)
+	$b_label.text = str(b_laugh)
+	$y_label.text = str(y_laugh)

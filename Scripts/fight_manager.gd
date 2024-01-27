@@ -43,11 +43,13 @@ func turn(current_turn, single = false):
 			ally[at + 1].b_laugh *= 2
 			ally[at + 1].r_laugh *= 2
 			ally[at + 1].y_laugh *= 2
+			ally[at + 1].update_label()
 	if ally[at].hability == 2:
 		ally[at].g_laugh *= 1.3
 		ally[at].b_laugh *= 1.3
 		ally[at].r_laugh *= 1.3
 		ally[at].y_laugh *= 1.3
+		ally[at].update_label()
 	
 	if enemy.is_dead():
 		print("GANHOU")
