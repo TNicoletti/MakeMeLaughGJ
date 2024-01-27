@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0xb1jduucacw"]
+
+[ext_resource type="PackedScene" uid="uid://b44cnp22f7gby" path="res://Scenes/char.tscn" id="1_unk6u"]
+
+[node name="Char" instance=ExtResource("1_unk6u")]
+hability = 2
+hability_description = "Gradually Increases its own attack"

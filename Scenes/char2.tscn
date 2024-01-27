@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxaivbuok0gws"]
+
+[ext_resource type="PackedScene" uid="uid://b44cnp22f7gby" path="res://Scenes/char.tscn" id="1_jelg5"]
+
+[node name="Char" instance=ExtResource("1_jelg5")]
+hability = 3
+hability_description = "next character attacks twice"

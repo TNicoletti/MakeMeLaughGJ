@@ -8,37 +8,14 @@
 [node name="pos_a_1" type="Node2D" parent="."]
 position = Vector2(150, 200)
 
-[node name="Char" parent="pos_a_1" instance=ExtResource("1_d002j")]
-hability = 3
-hability_description = "Doubles next damage"
-
 [node name="pos_a_2" type="Node2D" parent="."]
 position = Vector2(250, 200)
-
-[node name="Char" parent="pos_a_2" instance=ExtResource("1_d002j")]
-hability_description = "Multiplies own stats by 1.3"
 
 [node name="pos_a_3" type="Node2D" parent="."]
 position = Vector2(350, 200)
 
-[node name="Char" parent="pos_a_3" instance=ExtResource("1_d002j")]
-g_laugh = 2
-b_laugh = 2
-r_laugh = 2
-y_laugh = 2
-hability = 2
-hability_description = "Next turn will be executed twice"
-
 [node name="pos_a_4" type="Node2D" parent="."]
 position = Vector2(450, 200)
-
-[node name="Char" parent="pos_a_4" instance=ExtResource("1_d002j")]
-g_laugh = 15
-b_laugh = 15
-r_laugh = 15
-y_laugh = 15
-hability = 4
-hability_description = "Nothing"
 
 [node name="pos_e_1" type="Node2D" parent="."]
 position = Vector2(869, 297)
@@ -47,7 +24,6 @@ position = Vector2(869, 297)
 g_laugh = 1000
 b_laugh = 1000
 r_laugh = 1000
-y_laugh = 1000
 hability = 0
 hability_description = ""
 
