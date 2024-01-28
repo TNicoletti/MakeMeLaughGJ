@@ -45,6 +45,7 @@ _data = {
 }
 
 [node name="Char" type="Node2D"]
+scale = Vector2(1.31, 1.31)
 script = ExtResource("1_8hwsy")
 hability = 1
 hability_description = "Doubles next unity's stats"

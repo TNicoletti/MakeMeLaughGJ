@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://3ae0kkvdgt3e"]
+
+[ext_resource type="Script" path="res://Scripts/FinalWinSc.gd" id="1_60qsm"]
+[ext_resource type="AudioStream" uid="uid://xr04svev7anm" path="res://Sound/violin-win-5-185128.mp3" id="2_0yi32"]
+
+[node name="WinScene" type="Node2D"]
+script = ExtResource("1_60qsm")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1.0
+offset_top = -7.0
+offset_right = 246.0
+offset_bottom = 130.0
+scale = Vector2(3.975, 3.975)
+text = "You won the last level
+Thanks for playing :)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_0yi32")
+autoplay = true

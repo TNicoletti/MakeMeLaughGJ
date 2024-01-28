@@ -5,7 +5,6 @@
 [ext_resource type="AudioStream" uid="uid://cmfcnaltv7u3c" path="res://Sound/torta na cara 2.wav" id="2_x0f5p"]
 
 [node name="Char" instance=ExtResource("1_4sv66")]
-scale = Vector2(1.31, 1.31)
 char_name = "Benny"
 g_laugh = 50
 b_laugh = 50

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bng6a7gs3w061"]
+
+[ext_resource type="PackedScene" uid="uid://nf3270v61fb" path="res://Scenes/en.tscn" id="1_iki40"]
+
+[node name="Enemy" instance=ExtResource("1_iki40")]
+g_laugh = 6000
+b_laugh = 1500
+
+[node name="lbl_c" parent="pb_b" index="0"]
+layout_mode = 0
+
+[node name="lbl_c" parent="pb_g" index="0"]
+layout_mode = 0
+
+[node name="lbl_c" parent="pb_r" index="0"]
+layout_mode = 0

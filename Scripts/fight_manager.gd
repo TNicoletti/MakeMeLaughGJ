@@ -3,7 +3,7 @@ extends Node
 var ally 
 var enemy
 
-@onready var enemy_pre = [preload("res://Scenes/en1.tscn"), preload("res://Scenes/en2.tscn"), preload("res://Scenes/en3.tscn"), preload("res://Scenes/en2.tscn")]
+@onready var enemy_pre = [preload("res://Scenes/en1.tscn"), preload("res://Scenes/en2.tscn"), preload("res://Scenes/en3.tscn"), preload("res://Scenes/en2.tscn"), preload("res://Scenes/en4.tscn")]
 @onready var chars=[preload("res://Scenes/char1.tscn"),preload("res://Scenes/char2.tscn"),preload("res://Scenes/char3.tscn"),preload("res://Scenes/char4.tscn"),preload("res://Scenes/char5.tscn"),preload("res://Scenes/char6.tscn")]
 
 @export var turns = 15
@@ -33,7 +33,8 @@ get_parent().get_node("pos_a_4/Char")]
 @export var print_turns = true
 func turn(current_turn, single = false):
 	if current_turn > turns:
-		print("You lose") 
+		if print_turns:
+			print("You lose") 
 		lose()
 		return #loose
 	update_turn(current_turn)
@@ -107,7 +108,8 @@ func turn(current_turn, single = false):
 	
 	await get_tree().create_timer(2).timeout
 	if enemy.is_dead():
-		print("GANHOU")
+		if print_turns:
+			print("GANHOU")
 		win()
 		return
 	if ally[at].hability == 3:
@@ -122,9 +124,13 @@ func update_turn(x):
 	pass
 	
 func win():
-	get_tree().change_scene_to_file("res://Scenes/win_scene.tscn")
-	win_signal.emit()
 	GamePersistSg.level += 1
+	win_signal.emit()
+	if GamePersistSg.level >= GamePersistSg.MAX_LEVEL:
+		get_tree().change_scene_to_file("res://Scenes/final_win.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Scenes/win_scene.tscn")
+	
 	
 func lose():
 	get_tree().change_scene_to_file("res://Scenes/lose_scene.tscn")

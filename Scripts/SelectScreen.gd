@@ -9,13 +9,35 @@ func _ready():
 	if GamePersistSg.level > MAX_LEVEL:
 		pass
 	if GamePersistSg.level == 3:
-		GamePersistSg.ally[3] = 5
+		lock_char(5, 3)
+	if GamePersistSg.level == 4:
+		lock_char(3, 3)
+		
+	for i in range(4):
+		update_labels(i)
+
+func lock_char(char, char_pos):
+	GamePersistSg.ally[char_pos] = char
+	if char_pos == 0:
+		$HBoxContainer/VBoxContainer/CenterContainer/BotaoSuperior.disabled = true
+		$HBoxContainer/VBoxContainer/CenterContainer/BotaoSuperior.modulate = "5500ab"
+		$HBoxContainer/VBoxContainer/CenterContainer2/BotaoInferior.disabled = true
+		$HBoxContainer/VBoxContainer/CenterContainer2/BotaoInferior.modulate = "5500ab"
+	elif char_pos == 1:
+		$HBoxContainer/VBoxContainer2/CenterContainer/BotaoSuperior.disabled = true
+		$HBoxContainer/VBoxContainer2/CenterContainer/BotaoSuperior.modulate = "5500ab"
+		$HBoxContainer/VBoxContainer2/CenterContainer2/BotaoInferior.disabled = true
+		$HBoxContainer/VBoxContainer2/CenterContainer2/BotaoInferior.modulate = "5500ab"
+	elif char_pos == 2:
+		$HBoxContainer/VBoxContainer3/CenterContainer/BotaoSuperior.disabled = true
+		$HBoxContainer/VBoxContainer3/CenterContainer/BotaoSuperior.modulate = "5500ab"
+		$HBoxContainer/VBoxContainer3/CenterContainer2/BotaoInferior.disabled = true
+		$HBoxContainer/VBoxContainer3/CenterContainer2/BotaoInferior.modulate = "5500ab"
+	elif char_pos == 3:
 		$HBoxContainer/VBoxContainer4/CenterContainer/BotaoSuperior.disabled = true
 		$HBoxContainer/VBoxContainer4/CenterContainer/BotaoSuperior.modulate = "5500ab"
 		$HBoxContainer/VBoxContainer4/CenterContainer2/BotaoInferior.disabled = true
 		$HBoxContainer/VBoxContainer4/CenterContainer2/BotaoInferior.modulate = "5500ab"
-	for i in range(4):
-		update_labels(i)
 
 func _on_botao_superior1_pressed(id):
 	GamePersistSg.ally[id]=(GamePersistSg.ally[id]+1)%GamePersistSg.ALLY_MAX
