@@ -1,14 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpmtitfn0lc0c"]
+[gd_scene load_steps=4 format=3 uid="uid://bpmtitfn0lc0c"]
 
 [ext_resource type="PackedScene" uid="uid://b44cnp22f7gby" path="res://Scenes/char.tscn" id="1_7c1ol"]
+[ext_resource type="Texture2D" uid="uid://kwbwegw0tu56" path="res://Sprites/Teddy-Sheet.png" id="2_0rgkq"]
 [ext_resource type="Texture2D" uid="uid://bjg5ymigexmkp" path="res://Sprites/Teddy.png" id="2_54op2"]
 
 [node name="Char" instance=ExtResource("1_7c1ol")]
-g_laugh = 5
-b_laugh = 2
-r_laugh = 3
+char_name = "Teddy"
+b_laugh = 0
+r_laugh = 2
 hability = 4
 hability_description = "increases next unity's laugh factor by this unity's laugh factor"
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource("2_0rgkq")
 
 [node name="Head" parent="." index="6"]
 texture = ExtResource("2_54op2")

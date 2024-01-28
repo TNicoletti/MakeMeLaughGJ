@@ -1,14 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxaivbuok0gws"]
+[gd_scene load_steps=4 format=3 uid="uid://cxaivbuok0gws"]
 
 [ext_resource type="PackedScene" uid="uid://b44cnp22f7gby" path="res://Scenes/char.tscn" id="1_jelg5"]
 [ext_resource type="Texture2D" uid="uid://8ufqswy0x5k3" path="res://Sprites/Eddy.png" id="2_aubwr"]
+[ext_resource type="Texture2D" uid="uid://tkufesenacas" path="res://Sprites/Eddy-Sheet.png" id="2_uqmv4"]
 
 [node name="Char" instance=ExtResource("1_jelg5")]
+char_name = "Eddy"
 g_laugh = 4
 b_laugh = 3
 r_laugh = 0
 hability = 3
 hability_description = "Forces the next unity to make a extra turn"
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource("2_uqmv4")
 
 [node name="Head" parent="." index="6"]
 texture = ExtResource("2_aubwr")

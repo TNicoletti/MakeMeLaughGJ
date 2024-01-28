@@ -1,10 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://5pboq1wsx7x4"]
+[gd_scene load_steps=4 format=3 uid="uid://5pboq1wsx7x4"]
 
 [ext_resource type="PackedScene" uid="uid://b44cnp22f7gby" path="res://Scenes/char.tscn" id="1_4sv66"]
+[ext_resource type="Texture2D" uid="uid://77wo3v8hhcdp" path="res://Sprites/Benny-Sheet.png" id="2_nd0rk"]
+[ext_resource type="AudioStream" uid="uid://cmfcnaltv7u3c" path="res://Sound/torta na cara 2.wav" id="2_x0f5p"]
 
 [node name="Char" instance=ExtResource("1_4sv66")]
+scale = Vector2(1.31, 1.31)
+char_name = "Benny"
 g_laugh = 50
 b_laugh = 50
 r_laugh = 50
 hability = 0
 hability_description = ""
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource("2_nd0rk")
+
+[node name="attackS" parent="." index="8"]
+stream = ExtResource("2_x0f5p")

@@ -54,6 +54,12 @@ layout_mode = 2
 texture_normal = ExtResource("1_r7qyp")
 flip_v = true
 
+[node name="lbl_name" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Super"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="lbl_g" type="Label" parent="HBoxContainer/VBoxContainer"]
 modulate = Color(0, 0.345098, 0.0901961, 1)
 layout_mode = 2
@@ -103,6 +109,12 @@ layout_mode = 2
 layout_mode = 2
 texture_normal = ExtResource("1_r7qyp")
 flip_v = true
+
+[node name="lbl_name" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Super"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="lbl_g" type="Label" parent="HBoxContainer/VBoxContainer2"]
 modulate = Color(0, 0.345098, 0.0901961, 1)
@@ -154,6 +166,12 @@ layout_mode = 2
 texture_normal = ExtResource("1_r7qyp")
 flip_v = true
 
+[node name="lbl_name" type="Label" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Super"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="lbl_g" type="Label" parent="HBoxContainer/VBoxContainer3"]
 modulate = Color(0, 0.345098, 0.0901961, 1)
 layout_mode = 2
@@ -203,6 +221,12 @@ layout_mode = 2
 layout_mode = 2
 texture_normal = ExtResource("1_r7qyp")
 flip_v = true
+
+[node name="lbl_name" type="Label" parent="HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "Super"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="lbl_g" type="Label" parent="HBoxContainer/VBoxContainer4"]
 modulate = Color(0, 0.345098, 0.0901961, 1)

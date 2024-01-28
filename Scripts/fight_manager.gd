@@ -1,11 +1,11 @@
 extends Node
 
 var ally 
+var enemy
 
 @onready var enemy_pre = [preload("res://Scenes/en1.tscn"), preload("res://Scenes/en2.tscn"), preload("res://Scenes/en3.tscn"), preload("res://Scenes/en2.tscn")]
 @onready var chars=[preload("res://Scenes/char1.tscn"),preload("res://Scenes/char2.tscn"),preload("res://Scenes/char3.tscn"),preload("res://Scenes/char4.tscn"),preload("res://Scenes/char5.tscn"),preload("res://Scenes/char6.tscn")]
 
-var enemy
 @export var turns = 15
 
 signal win_signal
@@ -26,6 +26,7 @@ func _ready():
 get_parent().get_node("pos_a_2/Char"),
 get_parent().get_node("pos_a_3/Char"),
 get_parent().get_node("pos_a_4/Char")]
+	await get_tree().create_timer(2).timeout
 	turn(1)
 	pass
 
@@ -51,31 +52,31 @@ func turn(current_turn, single = false):
 	enemy.r_laugh -= ally[at].r_laugh
 	enemy.update_pb()
 	if ally[at].hability == 1:
-		var oldg = ally[(at + 1)%GamePersistSg.ALLY_MAX].g_laugh
-		var oldb = ally[(at + 1)%GamePersistSg.ALLY_MAX].b_laugh
-		var oldr = ally[(at + 1)%GamePersistSg.ALLY_MAX].r_laugh
-		ally[(at + 1)%GamePersistSg.ALLY_MAX].g_laugh *= 2
-		ally[(at + 1)%GamePersistSg.ALLY_MAX].b_laugh *= 2
-		ally[(at + 1)%GamePersistSg.ALLY_MAX].r_laugh *= 2
-		ally[(at + 1)%GamePersistSg.ALLY_MAX].update_label()
-		ally[(at + 1)%GamePersistSg.ALLY_MAX].animate_buff()
-		ally[(at - 1)%GamePersistSg.ALLY_MAX].g_laugh -= oldg
-		ally[(at - 1)%GamePersistSg.ALLY_MAX].b_laugh -= oldb
-		ally[(at - 1)%GamePersistSg.ALLY_MAX].r_laugh -= oldr
-		ally[(at - 1)%GamePersistSg.ALLY_MAX].update_label()
-		ally[(at - 1)%GamePersistSg.ALLY_MAX].animate_debuff()
+		var oldg = ally[(at + 1)%GamePersistSg.ALLY_QTD].g_laugh
+		var oldb = ally[(at + 1)%GamePersistSg.ALLY_QTD].b_laugh
+		var oldr = ally[(at + 1)%GamePersistSg.ALLY_QTD].r_laugh
+		ally[(at + 1)%GamePersistSg.ALLY_QTD].g_laugh *= 2
+		ally[(at + 1)%GamePersistSg.ALLY_QTD].b_laugh *= 2
+		ally[(at + 1)%GamePersistSg.ALLY_QTD].r_laugh *= 2
+		ally[(at + 1)%GamePersistSg.ALLY_QTD].update_label()
+		ally[(at + 1)%GamePersistSg.ALLY_QTD].animate_buff()
+		ally[(at - 1)%GamePersistSg.ALLY_QTD].g_laugh -= oldg
+		ally[(at - 1)%GamePersistSg.ALLY_QTD].b_laugh -= oldb
+		ally[(at - 1)%GamePersistSg.ALLY_QTD].r_laugh -= oldr
+		ally[(at - 1)%GamePersistSg.ALLY_QTD].update_label()
+		ally[(at - 1)%GamePersistSg.ALLY_QTD].animate_debuff()
 	if ally[at].hability == 2:
-		ally[at].g_laugh *= 1.3
-		ally[at].b_laugh *= 1.3
-		ally[at].r_laugh *= 1.3
+		ally[at].g_laugh *= 1.5
+		ally[at].b_laugh *= 1.5
+		ally[at].r_laugh *= 1.5
 		ally[at].update_label()
 		ally[at].animate_buff()
 	if ally[at].hability == 4:
-		ally[(at + 1)%GamePersistSg.ALLY_MAX].g_laugh += ally[at].g_laugh
-		ally[(at + 1)%GamePersistSg.ALLY_MAX].b_laugh += ally[at].b_laugh
-		ally[(at + 1)%GamePersistSg.ALLY_MAX].r_laugh += ally[at].r_laugh
-		ally[(at + 1)%GamePersistSg.ALLY_MAX].update_label()
-		ally[(at + 1)%GamePersistSg.ALLY_MAX].animate_buff()
+		ally[(at + 1)%GamePersistSg.ALLY_QTD].g_laugh += ally[at].g_laugh
+		ally[(at + 1)%GamePersistSg.ALLY_QTD].b_laugh += ally[at].b_laugh
+		ally[(at + 1)%GamePersistSg.ALLY_QTD].r_laugh += ally[at].r_laugh
+		ally[(at + 1)%GamePersistSg.ALLY_QTD].update_label()
+		ally[(at + 1)%GamePersistSg.ALLY_QTD].animate_buff()
 	if ally[at].hability == 5:
 		var high = 0
 		var hs
@@ -104,12 +105,11 @@ func turn(current_turn, single = false):
 		hl.update_label()
 			
 	
+	await get_tree().create_timer(2).timeout
 	if enemy.is_dead():
 		print("GANHOU")
 		win()
-		
 		return
-	await get_tree().create_timer(2).timeout 
 	if ally[at].hability == 3:
 		turn(current_turn + 1, true)
 		await get_tree().create_timer(2).timeout

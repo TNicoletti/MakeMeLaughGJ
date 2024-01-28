@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cw4nepyacg5f2" path="res://Sprites/Freddy.png" id="2_ytgpr"]
 
 [node name="Char" instance=ExtResource("1_bvinj")]
+char_name = "Freddy"
+r_laugh = 4
 hability_description = "Doubles next unity's laughs, decreases the previous by the same amount"
 
 [node name="Head" parent="." index="6"]

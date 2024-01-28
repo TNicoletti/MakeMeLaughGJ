@@ -1,14 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://k3qp4hkefmbd"]
+[gd_scene load_steps=4 format=3 uid="uid://k3qp4hkefmbd"]
 
 [ext_resource type="PackedScene" uid="uid://b44cnp22f7gby" path="res://Scenes/char.tscn" id="1_f6ohk"]
 [ext_resource type="Texture2D" uid="uid://boy5401q5wlo2" path="res://Sprites/Timmy.png" id="2_0fm3l"]
+[ext_resource type="Texture2D" uid="uid://bklvy4q73qiy1" path="res://Sprites/Timmy-Sheet.png" id="2_0pmdo"]
 
 [node name="Char" instance=ExtResource("1_f6ohk")]
-g_laugh = 50
-b_laugh = 80
-r_laugh = 90
+char_name = "Timmy"
+g_laugh = 70
+b_laugh = 70
+r_laugh = 30
 hability = 5
 hability_description = "Inverts the highest overall laughs with the lowest"
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource("2_0pmdo")
 
 [node name="Head" parent="." index="6"]
 texture = ExtResource("2_0fm3l")

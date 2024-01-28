@@ -8,9 +8,21 @@ r_laugh = 200
 
 [node name="lbl_c" parent="pb_b" index="0"]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 30.0
+offset_bottom = 26.0
 
 [node name="lbl_c" parent="pb_g" index="0"]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 30.0
+offset_bottom = 26.0
 
 [node name="lbl_c" parent="pb_r" index="0"]
 layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 30.0
+offset_bottom = 26.0

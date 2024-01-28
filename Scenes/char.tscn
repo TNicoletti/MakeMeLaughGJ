@@ -1,9 +1,48 @@
-[gd_scene load_steps=5 format=3 uid="uid://b44cnp22f7gby"]
+[gd_scene load_steps=9 format=3 uid="uid://b44cnp22f7gby"]
 
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="1_8hwsy"]
+[ext_resource type="Texture2D" uid="uid://bk0jnuisc6q0h" path="res://Sprites/Clown-Sheet.png" id="2_4cni1"]
 [ext_resource type="Texture2D" uid="uid://cxtjm6nmv7kkx" path="res://Sprites/Simboll.png" id="2_8f5kp"]
-[ext_resource type="Texture2D" uid="uid://c81f7v5qceyhe" path="res://Sprites/Jester.png" id="2_c10i7"]
 [ext_resource type="Texture2D" uid="uid://bawovq3wre8ce" path="res://Sprites/Benny.png" id="4_2q5xl"]
+[ext_resource type="AudioStream" uid="uid://dul5yh28w0duk" path="res://Sound/torta na cara.wav" id="5_hh6d2"]
+
+[sub_resource type="Animation" id="Animation_h1lxk"]
+resource_name = "clown_idle"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_x3wk5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yevnt"]
+_data = {
+"RESET": SubResource("Animation_x3wk5"),
+"clown_idle": SubResource("Animation_h1lxk")
+}
 
 [node name="Char" type="Node2D"]
 script = ExtResource("1_8hwsy")
@@ -13,8 +52,10 @@ hability_description = "Doubles next unity's stats"
 [node name="CharSC" type="Node2D" parent="."]
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(5, 5)
-texture = ExtResource("2_c10i7")
+position = Vector2(13, -18)
+scale = Vector2(2.27, 2.27)
+texture = ExtResource("2_4cni1")
+hframes = 8
 
 [node name="g_label" type="Label" parent="."]
 modulate = Color(0, 0.411765, 0.2, 1)
@@ -57,11 +98,20 @@ texture = ExtResource("2_8f5kp")
 
 [node name="is_turn" type="Sprite2D" parent="."]
 visible = false
-modulate = Color(0, 0.768627, 0.223529, 1)
-position = Vector2(0, -69)
-scale = Vector2(2, 2)
+modulate = Color(0.435294, 0.00392157, 0.796078, 1)
+position = Vector2(16, -105)
+scale = Vector2(3, 3)
 texture = ExtResource("2_8f5kp")
 
 [node name="Head" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("4_2q5xl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yevnt")
+}
+autoplay = "clown_idle"
+
+[node name="attackS" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_hh6d2")

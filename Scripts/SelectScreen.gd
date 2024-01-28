@@ -32,24 +32,29 @@ func update_labels(id):
 		$HBoxContainer/VBoxContainer/lbl_r.text = str(chars[a].r_laugh)
 		$HBoxContainer/VBoxContainer/hab_desc.text = st
 		$HBoxContainer/VBoxContainer/TextureRect.texture = chars[a].get_node("Head").texture
+		$HBoxContainer/VBoxContainer/lbl_name.text = chars[a].char_name
 	elif id == 1:
 		$HBoxContainer/VBoxContainer2/lbl_b.text = str(chars[a].b_laugh)
 		$HBoxContainer/VBoxContainer2/lbl_g.text = str(chars[a].g_laugh)
 		$HBoxContainer/VBoxContainer2/lbl_r.text = str(chars[a].r_laugh)
 		$HBoxContainer/VBoxContainer2/hab_desc.text = st
 		$HBoxContainer/VBoxContainer2/TextureRect.texture = chars[a].get_node("Head").texture
+		$HBoxContainer/VBoxContainer2/lbl_name.text = chars[a].char_name
 	elif id == 2:
 		$HBoxContainer/VBoxContainer3/lbl_b.text = str(chars[a].b_laugh)
 		$HBoxContainer/VBoxContainer3/lbl_g.text = str(chars[a].g_laugh)
 		$HBoxContainer/VBoxContainer3/lbl_r.text = str(chars[a].r_laugh)
 		$HBoxContainer/VBoxContainer3/hab_desc.text = st
 		$HBoxContainer/VBoxContainer3/TextureRect.texture = chars[a].get_node("Head").texture
+		$HBoxContainer/VBoxContainer3/lbl_name.text = chars[a].char_name
 	elif id == 3:
 		$HBoxContainer/VBoxContainer4/lbl_b.text = str(chars[a].b_laugh)
 		$HBoxContainer/VBoxContainer4/lbl_g.text = str(chars[a].g_laugh)
 		$HBoxContainer/VBoxContainer4/lbl_r.text = str(chars[a].r_laugh)
 		$HBoxContainer/VBoxContainer4/hab_desc.text = st
 		$HBoxContainer/VBoxContainer4/TextureRect.texture = chars[a].get_node("Head").texture
+		$HBoxContainer/VBoxContainer4/lbl_name.text = chars[a].char_name
+
 func _on_botao_inferior1_pressed(id):
 	GamePersistSg.ally[id]-=1
 	if GamePersistSg.ally[id]==-1:

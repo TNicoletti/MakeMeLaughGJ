@@ -21,6 +21,7 @@ func update_label():
 
 func set_turn():
 	$is_turn.visible = true
+	$attackS.play()
 	pass
 
 func unset_turn():
@@ -28,15 +29,17 @@ func unset_turn():
 	pass
 	
 func animate_buff():
-	$Sprite.modulate = "green"
+	var aux = $Sprite.modulate
+	$Sprite.modulate = "00cf6b"
 	await get_tree().create_timer(2).timeout 
-	$Sprite.modulate = "white"
+	$Sprite.modulate = aux
 	pass
 	
 func animate_debuff():
-	$Sprite.modulate = "red"
+	var aux = $Sprite.modulate
+	$Sprite.modulate = "d70061"
 	await get_tree().create_timer(2).timeout 
-	$Sprite.modulate = "white"
+	$Sprite.modulate = aux
 	pass
 	
 func animate_laugh():

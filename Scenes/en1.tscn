@@ -6,3 +6,12 @@
 g_laugh = 500
 b_laugh = 0
 r_laugh = 0
+
+[node name="lbl_c" parent="pb_b" index="0"]
+layout_mode = 0
+
+[node name="lbl_c" parent="pb_g" index="0"]
+layout_mode = 0
+
+[node name="lbl_c" parent="pb_r" index="0"]
+layout_mode = 0
