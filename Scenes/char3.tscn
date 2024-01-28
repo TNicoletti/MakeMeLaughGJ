@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcsxep7jen80d"]
+[gd_scene load_steps=3 format=3 uid="uid://dcsxep7jen80d"]
 
 [ext_resource type="PackedScene" uid="uid://b44cnp22f7gby" path="res://Scenes/char.tscn" id="1_bvinj"]
+[ext_resource type="Texture2D" uid="uid://cw4nepyacg5f2" path="res://Sprites/Freddy.png" id="2_ytgpr"]
 
 [node name="Char" instance=ExtResource("1_bvinj")]
-hability_description = "Increases right ally attack gradually"
+hability_description = "Doubles next unity's laughs, decreases the previous by the same amount"
+
+[node name="Head" parent="." index="6"]
+texture = ExtResource("2_ytgpr")

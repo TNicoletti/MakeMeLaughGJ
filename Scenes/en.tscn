@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://nf3270v61fb"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_whxkn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2c3nq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a87sl"]
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource("1_whxkn")
+
+[node name="pb_b" type="ProgressBar" parent="."]
+modulate = Color(0.14902, 0.47451, 1, 1)
+offset_left = 20.0
+offset_top = -39.0
+offset_right = 43.0
+offset_bottom = 42.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_2c3nq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a87sl")
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="lbl_c" type="Label" parent="pb_b"]
+offset_left = 1.0
+offset_top = 47.0
+offset_right = 31.0
+offset_bottom = 73.0
+scale = Vector2(0.74, 0.74)
+text = "xxx"
+
+[node name="pb_g" type="ProgressBar" parent="."]
+modulate = Color(0, 0.411765, 0.0156863, 1)
+offset_left = -42.0
+offset_top = -40.0
+offset_right = -19.0
+offset_bottom = 41.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_2c3nq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a87sl")
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="lbl_c" type="Label" parent="pb_g"]
+offset_left = 1.0
+offset_top = 47.0
+offset_right = 31.0
+offset_bottom = 73.0
+scale = Vector2(0.74, 0.74)
+text = "xxx"
+
+[node name="pb_r" type="ProgressBar" parent="."]
+modulate = Color(0.643137, 0, 0.0313726, 1)
+offset_left = -11.0
+offset_top = -39.0
+offset_right = 12.0
+offset_bottom = 42.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_2c3nq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a87sl")
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="lbl_c" type="Label" parent="pb_r"]
+offset_left = 1.0
+offset_top = 47.0
+offset_right = 31.0
+offset_bottom = 73.0
+scale = Vector2(0.74, 0.74)
+text = "xxx"

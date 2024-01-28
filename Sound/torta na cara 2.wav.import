@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmfcnaltv7u3c"
+path="res://.godot/imported/torta na cara 2.wav-0b82e33278f5952efd15ef7ecd277ee0.sample"
+
+[deps]
+
+source_file="res://Sound/torta na cara 2.wav"
+dest_files=["res://.godot/imported/torta na cara 2.wav-0b82e33278f5952efd15ef7ecd277ee0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

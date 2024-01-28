@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cm85ddienyg5j"]
 
 [ext_resource type="Script" path="res://Scripts/btn_start.gd" id="1_0h1vl"]
-[ext_resource type="AudioStream" uid="uid://bd3l8dvbeixbl" path="res://Assets/Audio/Music/Música menu Final.ogg" id="2_qkmfp"]
+[ext_resource type="AudioStream" uid="uid://c4fpm556uqhk0" path="res://Assets/Audio/Music/Música menu Final.ogg" id="2_qkmfp"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,6 +27,5 @@ script = ExtResource("1_0h1vl")
 stream = ExtResource("2_qkmfp")
 volume_db = -15.0
 autoplay = true
-stream_paused = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]

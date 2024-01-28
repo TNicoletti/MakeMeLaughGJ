@@ -1,7 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0xb1jduucacw"]
+[gd_scene load_steps=3 format=3 uid="uid://b0xb1jduucacw"]
 
 [ext_resource type="PackedScene" uid="uid://b44cnp22f7gby" path="res://Scenes/char.tscn" id="1_unk6u"]
+[ext_resource type="Texture2D" uid="uid://cclkbkg4c3f5a" path="res://Sprites/Lenny.png" id="2_hdawr"]
 
 [node name="Char" instance=ExtResource("1_unk6u")]
+g_laugh = 1
+b_laugh = 1
+r_laugh = 0
 hability = 2
-hability_description = "Gradually Increases its own attack"
+hability_description = "Gradually Increases its own laughs"
+
+[node name="Head" parent="." index="6"]
+texture = ExtResource("2_hdawr")

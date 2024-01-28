@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfyl54rcegm8o"]
+
+[ext_resource type="PackedScene" uid="uid://nf3270v61fb" path="res://Scenes/en.tscn" id="1_p3ivu"]
+
+[node name="Enemy" instance=ExtResource("1_p3ivu")]
+b_laugh = 500
+r_laugh = 200
+
+[node name="lbl_c" parent="pb_b" index="0"]
+layout_mode = 0
+
+[node name="lbl_c" parent="pb_g" index="0"]
+layout_mode = 0
+
+[node name="lbl_c" parent="pb_r" index="0"]
+layout_mode = 0
