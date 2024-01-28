@@ -5,4 +5,3 @@ const MAX_LEVEL = 5
 var ally = [0,0,0,0]
 
 var level = 0
-

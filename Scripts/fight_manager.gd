@@ -12,7 +12,7 @@ signal win_signal
 signal lose_signal
 
 func _ready():
-	get_parent().get_node("level_label").text = "Level: " + str(GamePersistSg.level + 1)
+	get_parent().get_node("Ui-level/level_label").text = str(GamePersistSg.level + 1)
 	
 	enemy = enemy_pre[GamePersistSg.level].instantiate()
 	get_parent().get_node("pos_e_1").add_child(enemy)
@@ -48,6 +48,7 @@ func turn(current_turn, single = false):
 		print(str(enemy.r_laugh) + " -= " + str(ally[at].r_laugh))
 		print("hability " + str(ally[at].hability))
 		
+	get_parent().get_node("Haha/AnimationPlayer").play("Hahaha")
 	enemy.g_laugh -= ally[at].g_laugh
 	enemy.b_laugh -= ally[at].b_laugh
 	enemy.r_laugh -= ally[at].r_laugh
@@ -120,7 +121,7 @@ func turn(current_turn, single = false):
 		turn(current_turn + 1)
 
 func update_turn(x):
-	get_parent().get_node("turn_label").text= "Turn: " + str(x)
+	get_parent().get_node("Ui-turn/turn_label").text = str(x)
 	pass
 	
 func win():

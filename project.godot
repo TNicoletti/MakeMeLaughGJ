@@ -23,6 +23,7 @@ GamePersistSg="*res://Scripts/GamePersistSG.gd"
 
 window/size/viewport_width=980
 window/size/viewport_height=540
+window/size/resizable=false
 
 [rendering]
 

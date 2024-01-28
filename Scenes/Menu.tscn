@@ -1,27 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://cm85ddienyg5j"]
+[gd_scene load_steps=8 format=3 uid="uid://cm85ddienyg5j"]
 
 [ext_resource type="Script" path="res://Scripts/btn_start.gd" id="1_0h1vl"]
+[ext_resource type="Texture2D" uid="uid://dwloodtbgjpmy" path="res://Sprites/UI-PlayButton.png" id="1_4l1mi"]
+[ext_resource type="Texture2D" uid="uid://4i7ytpbnx7iw" path="res://Sprites/Logo.png" id="1_km32s"]
+[ext_resource type="Texture2D" uid="uid://cv470tjas0ot2" path="res://Sprites/MainMenuBG.png" id="1_mkbjb"]
 [ext_resource type="AudioStream" uid="uid://c4fpm556uqhk0" path="res://Assets/Audio/Music/Música menu Final.ogg" id="2_qkmfp"]
+[ext_resource type="Texture2D" uid="uid://bf1jryh3tqyrw" path="res://Sprites/UI-QuitButton.png" id="3_7rpir"]
+[ext_resource type="Script" path="res://Scripts/btn_quit.gd" id="4_glpwh"]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="MainMenuBg" type="Sprite2D" parent="."]
+position = Vector2(491.5, 272)
+scale = Vector2(2.70799, 2.71)
+texture = ExtResource("1_mkbjb")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 436.0
-offset_top = 240.0
-offset_right = 545.0
-offset_bottom = 298.0
+offset_left = 316.0
+offset_top = 315.0
+offset_right = 446.135
+offset_bottom = 370.56
+scale = Vector2(2.56, 2.56)
 size_flags_horizontal = 4
 size_flags_vertical = 4
+alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Scaling laughs"
-horizontal_alignment = 1
+[node name="Logo" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(61.7188, -38.2813)
+scale = Vector2(1.4603, 1.08643)
+texture = ExtResource("1_km32s")
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-text = "Play"
+texture_normal = ExtResource("1_4l1mi")
+stretch_mode = 3
 script = ExtResource("1_0h1vl")
+
+[node name="btn_quit" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_7rpir")
+stretch_mode = 3
+script = ExtResource("4_glpwh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_qkmfp")
@@ -29,3 +48,4 @@ volume_db = -15.0
 autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/btn_quit" to="VBoxContainer/btn_quit" method="_on_pressed"]
